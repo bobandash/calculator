@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+
+
+button {
+    color: white;
+    background-color: black;
+    border: solid black;
+    font-family: 'Helvetica','Times New Roman', 'Arial';
+    font-size: 40px;
+    width: 18%;
+    height: 90%;
+    margin: 0.6%;
+    justify-content: center;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+#container {
+    background-color: silver;
+    border: solid black;
+    width: 800px;
+    height: 80%;
+    display: grid;
+    overflow: none;
+    margin: 0 auto;
+    grid-template-rows: 10% 20% 5% 15% 15% 15% 15%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas:
+        ". header ."
+        ". output ."
+        " . . ."
+        ". buttonRow1 ."
+        ". buttonRow2 ."
+        ". buttonRow3 ."
+        ". buttonRow4 ."
+}
+
+.calculatorInfo {
+    width: 100%;
+    display: inline-block;
+    font-size: 32px;
+    font-family: 'Orbitron', 'Times New Roman', 'Comic Sans';
+    height: 100%;
+}
+
+#calculatorName {
+    float: left;
+    clear: left;
+}
+
+#calculatorModel {
+    float: right;
+}
+
+#header {
+    grid-area: header;
+}
+
+
+#output {
+    background-color: darkolivegreen;
+    grid-area: output;
+    border: solid black;
+}
+
+#current-operator {
+    height: 20%;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+#number-output {
+    height: 80%;
+    font-size: 80px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#firstRow
+{
+    grid-area: buttonRow1;
+}
+
+#secondRow
+{
+    grid-area: buttonRow2;
+}
+
+#thirdRow
+{
+    grid-area: buttonRow3;
+}
+
+#fourthRow
+{
+    grid-area: buttonRow4;
+}
+
+#divide, #multiply, #subtract, #plus, #plusMinus, #power {
+    background-color: gray;
+}
+
+#clear, #clearAll {
+    background-color: red;
+}
+
+@media only screen and (max-width: 1130px)
+{
+    #container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 630px)
+{
+    #container {
+        width: 600px;
+    }
+}
